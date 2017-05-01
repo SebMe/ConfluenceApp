@@ -1,0 +1,17 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>microposts</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list>
+    <ion-item *ngFor="let post of microposts">
+      <img [src]="post.profilePicturePath" />
+      <div style="word-wrap:break-word;" [innerHTML] = "'<p>' + post.content + '</p>'"></div>
+    </ion-item>
+  </ion-list>
+</ion-content>
